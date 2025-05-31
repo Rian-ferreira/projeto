@@ -1,0 +1,173 @@
+header {
+    position: relative; /* já está */
+    background: linear-gradient(-45deg, #a30f0f, #1fa2ff, #12d8fa, #a6ffcb);
+    background-size: 400% 400%;
+    animation: headerGradient 12s ease infinite;
+    color: #fff;
+    padding: 32px 0 44px 0;
+    text-align: center;
+    overflow: hidden; /* garante que o overlay fique no header */
+}
+header::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, #0006 0%, #0004 40%, #0002 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+header > * {
+    position: relative;
+    z-index: 2;
+}
+@keyframes headerGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0 0 18px 0;
+    letter-spacing: 1.2px;
+}
+nav {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.08em;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+
+section {
+    padding: 40px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: left;
+}
+
+#sobre {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 3px 16px 0 rgba(50,100,220,0.06);
+    margin: 48px auto 48px auto;
+    max-width: 850px;
+    padding: 38px 36px;
+}
+
+.sobre-titulo {
+    font-size: 2.3em;
+    font-weight: 800;
+    color: #1e2746;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
+    /* Pode ser centralizado ou left: */
+    text-align: left;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 46px;
+}
+
+.sobre-foto {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e6e6e6;
+    box-shadow: 0 8px 28px 0 rgba(50,100,220,0.10);
+    background: #fff;
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.8s cubic-bezier(.36,1.56,.64,1);
+}
+
+.sobre-foto.aparecer {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.sobre-descricao {
+    font-size: 1.18em;
+    color: #2a3246;
+    line-height: 1.62;
+    font-weight: 400;
+    max-width: 520px;
+    margin-top: 16px;
+}
+
+/* Responsivo */
+@media (max-width: 850px) {
+    #sobre {
+        padding: 24px 8px;
+    }
+    .sobre-conteudo {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .sobre-descricao {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+
+body {
+    background: linear-gradient(-45deg, #1fa2ff, #12d8fa, #a6ffcb, #e3fdfa);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.sobre-descricao {
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #2a3246;
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 520px;
+    margin-top: 16px;
+}
+
+.card-bloco {
+    transition: transform 0.32s cubic-bezier(.36,1.56,.64,1), box-shadow 0.28s;
+    will-change: transform, box-shadow;
+}
+
+.card-bloco:hover {
+    transform: scale(1.045);
+    box-shadow: 0 8px 32px 0 rgba(31,162,255,0.13);
+    z-index: 2;
+}
