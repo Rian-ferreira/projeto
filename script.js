@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(() => {
-        const foto = document.querySelector('.sobre-foto');
-        foto.classList.add('aparecer');
-    }, 350);
+    // Mostrar mensagem ao enviar contato
+    const form = document.getElementById("formContato");
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            document.getElementById("msgEnviada").style.display = "inline";
+            setTimeout(() => {
+                document.getElementById("msgEnviada").style.display = "none";
+                form.reset();
+            }, 2000);
+        });
+    }
 });

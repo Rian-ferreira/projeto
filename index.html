@@ -1,68 +1,112 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Portfólio | Rian Gonçalves</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="Conheça o portfólio de Rian Gonçalves. Projetos, carreira, contato e mais!" />
-    <link rel="me" href="https://www.linkedin.com/in/rian-gon%C3%A7alves-ferreira-926584236/">
-    <meta property="og:url" content="https://www.linkedin.com/in/rian-gon%C3%A7alves-ferreira-926584236/" />
-    <link rel="stylesheet" href="styles.css">
-    <title>Portfólio Rian Gonçalves</title>
+    <!-- Ícones CDN para LinkedIn/GitHub -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1>Rian Gonçalves</h1>
-    <nav>
-        <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-</header>
+    <!-- Navbar fixa no topo -->
+    <header class="nav-header">
+        <div class="container-nav">
+            <div class="logo">Rian Gonçalves</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="active">Início</a></li>
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<section id="sobre" class="card-bloco">
-    <h2 class="sobre-titulo">Sobre Mim</h2>
-    <div class="sobre-conteudo">
-        <img src="1738468385434.jpeg" alt="Foto de perfil" class="sobre-foto">
-        <p class="sobre-descricao">
-            Sou um estudante apaixonado por tecnologia e segurança da informação, buscando constantemente novos desafios e aprendizado.
-        </p>
-    </div>
-</section>
+    <!-- Intro -->
+    <section class="intro-section" id="inicio">
+        <div class="intro-content">
+            <img src="1738468385434.jpeg" alt="Foto de perfil" class="intro-foto">
+            <h1>Rian Gonçalves</h1>
+            <p class="intro-desc">
+                Estudante de Tecnologia | Apaixonado por Segurança da Informação
+            </p>
+        </div>
+    </section>
+ <!-- Sobre Mim -->
+    <section id="sobre" class="sobre-section">
+        <div class="sobre-bloco">
+            <div class="sobre-txt">
+                <h2>Sobre Mim</h2>
+                <p>
+                    Sou estudante apaixonado por tecnologia e segurança da informação. Busco sempre novos desafios, aprendizado e colaborar em projetos inovadores.
+                </p>
+                <h4>Habilidades & Tecnologias:</h4>
+                <div class="skills">
+                    <span class="skill">Linux</span>
+                    <span class="skill">Zabbix</span>
+                    <span class="skill">Antivirus</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">Redes</span>
+                    <span class="skill">hyper-V</span>
+                     <span class="skill">Backups</span>
+                    
+                </div>
+            </div>
+            <img src="1738468385434.jpeg" alt="Minha Foto" class="sobre-foto">
+        </div>
+    </section>
 
-<section id="projetos" class="card-bloco">
-    <h2>Meus Projetos</h2>
-    <div class="projeto">
-        <img src="zabbix.webp" alt="Zabbix" style="width:60px;height:60px;margin-bottom:10px;">
-        <h3>Zabbix Cloud</h3>
-        <p>
-            <strong>Empresa:</strong> AD'ORO S/A
-        </p>
-        <p>
-            Este projeto tem como objetivo implementar o Zabbix, uma plataforma de monitoramento de código aberto, em um ambiente distribuído baseado em cloud. A solução será composta por um servidor Zabbix central, suportado por um banco de dados PostgreSQL e seus componentes, garantindo alta disponibilidade e desempenho.<br><br>
-            Para otimizar o monitoramento em diferentes locais e reduzir a carga no servidor principal, serão implantados três Zabbix Proxy, permitindo uma coleta de dados mais eficiente e descentralizada. Essa abordagem melhora a resiliência do sistema e minimiza latências na transmissão de informações.<br><br>
-            A solução incluirá a integração do Zabbix com diversos agentes e dispositivos, garantindo uma visibilidade abrangente da infraestrutura de TI. Além disso, serão personalizados dashboards e alertas para atender às necessidades específicas da organização, permitindo a detecção proativa de problemas e a otimização do desempenho dos recursos.<br><br>
-            Para aprimorar a visualização dos dados coletados, será implementado o Grafana, proporcionando uma interface intuitiva e relatórios avançados. Com essa arquitetura, o projeto visa garantir um monitoramento confiável, escalável e eficiente, adequado para ambientes corporativos complexos e distribuídos.
-        </p>
-    </div>
-</section>
+    <!-- Projetos -->
+    <section id="projetos" class="projetos-section">
+        <div class="container">
+            <h2>Projeto em Destaque</h2>
+            <div class="projeto-card destaque">
+                <img src="zabbix.webp" alt="Projeto Zabbix" class="projeto-img">
+                <div class="projeto-info">
+                    <h3>Zabbix Cloud</h3>
+                    <p>
+                        Este projeto tem como objetivo implementar o Zabbix, uma poderosa plataforma de monitoramento de código aberto, em um ambiente cloud distribuído, escalável e com alta disponibilidade.<br><br>
+                        A arquitetura foi desenhada para integração com Grafana, múltiplos Zabbix Proxies para coleta descentralizada de dados, monitoramento de redes, servidores, aplicações e serviços críticos. O projeto incluiu automações, alertas inteligentes, personalização de dashboards e scripts avançados para garantir a proatividade na detecção e solução de incidentes.<br><br>
+                        Toda a solução roda sobre containers, permitindo atualizações sem downtime e fácil expansão. Ferramentas utilizadas: Docker, PostgreSQL, Nginx, Zabbix API, Telegram Bot para alertas e documentação em Markdown.
+                    </p>
+                    <a href="https://github.com/rian-ferreira/zabbix-cloud" target="_blank" class="projeto-link btn-destaque">
+                        <i class="bi bi-github"></i> Ver Projeto no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="contato" class="card-bloco">
-    <h2>Contato</h2>
-    <div class="contato-info">
-        <p><strong>Email:</strong> rian.ferreira@gmail.com</p>
-        <p><strong>Telefone:</strong> (55) 11916428431</p>
-        <a href="https://www.linkedin.com/in/rian-gon%C3%A7alves-ferreira-926584236/" target="_blank" class="linkedin-icone">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" style="width:40px;vertical-align:middle;">
-        </a>
-    </div>
-</section>
+    <!-- Contato -->
+    <section id="contato" class="contato-section">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="formContato" class="contato-form">
+                <input type="text" name="nome" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="text" name="assunto" placeholder="Assunto" required>
+                <textarea name="mensagem" rows="4" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+                <span id="msgEnviada" class="msg-enviada">Mensagem enviada!</span>
+            </form>
+            <div class="contato-social">
+                <a href="https://www.linkedin.com/in/rian-gon%C3%A7alves-ferreira-926584236/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/rian-ferreira" target="_blank">
+                    <i class="bi bi-github"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-
+    <!-- Footer -->
     <footer>
-        <p>© 2024 Rian Gonçalves</p>
+        <div class="container">
+            © 2024 Rian Gonçalves
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
