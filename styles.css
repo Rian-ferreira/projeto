@@ -1,12 +1,12 @@
 header {
-    position: relative; /* já está */
+    position: relative;
     background: linear-gradient(-45deg, #a30f0f, #1fa2ff, #12d8fa, #a6ffcb);
     background-size: 400% 400%;
     animation: headerGradient 12s ease infinite;
     color: #fff;
     padding: 32px 0 44px 0;
     text-align: center;
-    overflow: hidden; /* garante que o overlay fique no header */
+    overflow: hidden;
 }
 header::before {
     content: "";
@@ -24,6 +24,26 @@ header > * {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 650px) {
+    header {
+        padding: 20px 0 26px 0;
+    }
+    header h1 {
+        font-size: 1.45em;
+        padding: 0 8px;
+        word-break: break-word;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    nav ul li {
+        display: block;
+        margin: 6px 0;
+    }
 }
 
 
